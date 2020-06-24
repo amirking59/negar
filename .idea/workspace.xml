@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="813fd730-b3b3-48ab-93bc-ec81e68e9c95" name="Default Changelist" comment="" />
+    <list default="true" id="813fd730-b3b3-48ab-93bc-ec81e68e9c95" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/page/NotFoundPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/page/NotFoundPage.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +109,11 @@
       <workItem from="1592729477465" duration="2172000" />
       <workItem from="1592804485477" duration="5494000" />
       <workItem from="1592819837010" duration="1688000" />
-      <workItem from="1592839339020" duration="2725000" />
+      <workItem from="1592839339020" duration="2883000" />
+      <workItem from="1592847243008" duration="25000" />
+      <workItem from="1592901285083" duration="502000" />
+      <workItem from="1592901799761" duration="1210000" />
+      <workItem from="1592992350004" duration="242000" />
     </task>
     <servers />
   </component>
@@ -113,14 +121,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="566" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584100203986">
+    <state x="566" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592901511505">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="566" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1584100203986" />
-    <state x="530" y="178" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584176518514">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="530" y="178" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1584176518514" />
+    <state x="566" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1592901511505" />
     <state x="580" y="186" key="FileChooserDialogImpl" timestamp="1589824627187">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
