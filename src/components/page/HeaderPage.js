@@ -1,15 +1,20 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
+
 
 const HeaderPage = props => {
     return (
         <div>
-            <Link to={"/"}>
-                Home
-            </Link>
-            <Link to={"/add"}>
-                Add event
-            </Link>
+            <h1 className={"header__title"}>NEGAR</h1>
+            <div className={"header__link__wrapper"}>
+                <Link className={"header__link"} to={"/"}>
+                    Home
+                </Link>
+                <Link className={"header__link"} to={"/add"}>
+                    Add event
+                </Link>
+            </div>
+
         </div>
     )
 };

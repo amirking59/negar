@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="813fd730-b3b3-48ab-93bc-ec81e68e9c95" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/page/NotFoundPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/page/NotFoundPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CalendarListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CalendarListItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/page/AddPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/page/AddPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/page/EditPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/page/EditPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/page/HeaderPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/page/HeaderPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/configStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/configStore.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +44,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kng\WebstormProjects\untitled3\src\styles\base" />
       <recent name="C:\Users\kng\WebstormProjects\untitled3\src\components\page" />
     </key>
   </component>
@@ -113,7 +123,15 @@
       <workItem from="1592847243008" duration="25000" />
       <workItem from="1592901285083" duration="502000" />
       <workItem from="1592901799761" duration="1210000" />
-      <workItem from="1592992350004" duration="242000" />
+      <workItem from="1592992350004" duration="776000" />
+      <workItem from="1592993284351" duration="715000" />
+      <workItem from="1593020206191" duration="1203000" />
+      <workItem from="1593114188549" duration="3320000" />
+      <workItem from="1593160801869" duration="723000" />
+      <workItem from="1593328868576" duration="1391000" />
+      <workItem from="1593455515769" duration="2030000" />
+      <workItem from="1593518775060" duration="2522000" />
+      <workItem from="1593543393193" duration="1787000" />
     </task>
     <servers />
   </component>

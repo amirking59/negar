@@ -1,5 +1,5 @@
-import {combineReducers, createStore} from "redux";
-import moment from "moment";
+import {combineReducers, createStore, applyMiddleware} from "redux";
+import thunk from "redux-thunk";
 
 // Calendar reducer
 const calendarDefaultState = [];
@@ -23,6 +23,8 @@ const calendarReducer = (state = calendarDefaultState, action) => {
                     return e;
                 }
             });
+        case "SET_EVENT":
+            return action.events;
         default:
             return state;
     }
@@ -60,5 +62,6 @@ const filterReducer = (state = filterDefaultState, action) => {
 export default createStore(combineReducers({
     calendar: calendarReducer,
     filter: filterReducer
-    })
+    }),
+    applyMiddleware(thunk)
 );

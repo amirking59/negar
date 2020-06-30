@@ -4,7 +4,7 @@ import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 import {SingleDatePicker} from "react-dates";
 import moment from "moment";
-import {editEvent, removeEvent} from "../../store/actions/calendar";
+import {startEditEvent, startRemoveEvent} from "../../store/actions/calendar";
 
 
 const EditPage = props => {
@@ -14,58 +14,61 @@ const EditPage = props => {
     const [date, setDate] = useState(moment(props.event.at));
     return (
         <div>
-            <h1>edit event</h1>
-            <form onSubmit={(e) => {
-                e.preventDefault();
-                if(text) {
-                    props.editEvent(props.match.params.id, {
-                        title: text,
-                        at: date,
-                        note: note
-                    });
+            <div>
+                <h1>edit event</h1>
+                <form onSubmit={(e) => {
+                    e.preventDefault();
+                    if(text) {
+                        props.editEvent(props.match.params.id, {
+                            title: text,
+                            at: date,
+                            note: note
+                        });
+                        props.history.push("/");
+                    }
+                }}>
+                    <input
+                        value={text}
+                        onChange={(e) => {
+                            setText(e.target.value)
+                        }}
+                        type="text"
+                        placeholder={"title"}
+                        autoFocus
+                    />
+                    <input
+                        value={note}
+                        onChange={(e) => {
+                            setNote(e.target.value)
+                        }}
+                        type="text"
+                        placeholder={"note(optional)"}
+                        autoFocus
+                    />
+                    <SingleDatePicker
+                        id={"date"}
+                        date={date}
+                        onDateChange={(date) => {
+                            setDate(date);
+                        }}
+                        focused={focus}
+                        onFocusChange={({focused}) => {
+                            setFocus(focused)
+                        }}
+                        numberOfMonths={1}
+                    />
+                    <button>
+                        Save changes!
+                    </button>
+                </form>
+                <button onClick={(e) => {
+                    props.removeEvent(props.event.id);
                     props.history.push("/");
-                }
-            }}>
-                <input
-                    value={text}
-                    onChange={(e) => {
-                        setText(e.target.value)
-                    }}
-                    type="text"
-                    placeholder={"title"}
-                    autoFocus
-                />
-                <input
-                    value={note}
-                    onChange={(e) => {
-                        setNote(e.target.value)
-                    }}
-                    type="text"
-                    placeholder={"note(optional)"}
-                    autoFocus
-                />
-                <SingleDatePicker
-                    id={"date"}
-                    date={date}
-                    onDateChange={(date) => {
-                        setDate(date);
-                    }}
-                    focused={focus}
-                    onFocusChange={({focused}) => {
-                        setFocus(focused)
-                    }}
-                    numberOfMonths={1}
-                />
-                <button>
-                    Save changes!
+                }}>
+                    Remove event
                 </button>
-            </form>
-            <button onClick={(e) => {
-                props.removeEvent(props.event.id);
-                props.history.push("/");
-            }}>
-                Remove event
-            </button>
+            </div>
+
         </div>
     )
 };
@@ -75,8 +78,8 @@ const mapStateToProps = (state, props) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    editEvent: (id, {title, at, note}) => dispatch(editEvent(id,{title, at, note})),
-    removeEvent: (id) => dispatch(removeEvent(id))
+    editEvent: (id, {title, at, note}) => dispatch(startEditEvent(id,{title, at, note})),
+    removeEvent: (id) => dispatch(startRemoveEvent(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(EditPage);

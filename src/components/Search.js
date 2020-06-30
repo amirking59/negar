@@ -9,29 +9,33 @@ const Search = props => {
     const [focus, setFocus] = useState(null);
     return (
         <div>
-            <DateRangePicker
-                startDateId="startDate"
-                startDate={props.filter.startDate}
-                endDateId={"endDate"}
-                endDate={props.filter.endDate}
-                onDatesChange={({ startDate, endDate }) => {
-                    props.setStartDate(startDate);
-                    props.setEndDate(endDate);
-                }}
-                focusedInput={focus}
-                onFocusChange={(focusedInput) => {
-                    setFocus(focusedInput)
-                }}
-                numberOfMonths={1}
-                isOutsideRange={() => false}
-            />
-            <button onClick={(e) => {
+            <div className={"search__datepicker"}>
+                <DateRangePicker
+                    startDateId="startDate"
+                    startDate={props.filter.startDate}
+                    endDateId={"endDate"}
+                    endDate={props.filter.endDate}
+                    onDatesChange={({ startDate, endDate }) => {
+                        props.setStartDate(startDate);
+                        props.setEndDate(endDate);
+                    }}
+                    focusedInput={focus}
+                    onFocusChange={(focusedInput) => {
+                        setFocus(focusedInput)
+                    }}
+                    numberOfMonths={1}
+                    isOutsideRange={() => false}
+                />
+            </div>
+
+            <button className={"search__clear"} onClick={(e) => {
                 props.setStartDate(null);
                 props.setEndDate(null);
             }}>
                 clear
             </button>
             <input
+                className={"search__input"}
                 type={"text"}
                 placeholder={"search..."}
                 value={props.filter.text}

@@ -1,0 +1,25 @@
+.search {
+    &__datepicker {
+        display: inline-block;
+        margin-right: 25px;
+    }
+
+    &__clear {
+        font-size: 20px;
+        font-family: "Source Sans Pro", serif;
+        font-weight: 700;
+        margin: 0 auto;
+        color: white;
+        background: black;
+        border: none;
+        padding: 10px 20px;
+    }
+
+    &__input {
+        font-weight: 700;
+        padding: 5px 10px;
+        margin: 20px 0;
+        width: 50%;
+        display: block;
+    }
+}
