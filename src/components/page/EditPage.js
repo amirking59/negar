@@ -19,9 +19,9 @@ const EditPage = props => {
                 <form onSubmit={(e) => {
                     e.preventDefault();
                     if(text) {
-                        props.editEvent(props.match.params.id, {
+                        props.startEditEvent(props.event.id, {
                             title: text,
-                            at: date,
+                            at: moment(date).valueOf(),
                             note: note
                         });
                         props.history.push("/");
@@ -78,7 +78,7 @@ const mapStateToProps = (state, props) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    editEvent: (id, {title, at, note}) => dispatch(startEditEvent(id,{title, at, note})),
+    startEditEvent: (id, {title, at, note}) => dispatch(startEditEvent(id,{title, at, note})),
     removeEvent: (id) => dispatch(startRemoveEvent(id))
 });
 
