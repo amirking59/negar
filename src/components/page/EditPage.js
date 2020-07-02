@@ -14,11 +14,11 @@ const EditPage = props => {
     const [date, setDate] = useState(moment(props.event.at));
     return (
         <div>
-            <div>
-                <h1>edit event</h1>
+            <div className={"edit__wrapper"}>
+                <h1 className={"edit__title"}>Edit event</h1>
                 <form onSubmit={(e) => {
                     e.preventDefault();
-                    if(text) {
+                    if (text) {
                         props.startEditEvent(props.event.id, {
                             title: text,
                             at: moment(date).valueOf(),
@@ -28,6 +28,7 @@ const EditPage = props => {
                     }
                 }}>
                     <input
+                        className={"edit__input"}
                         value={text}
                         onChange={(e) => {
                             setText(e.target.value)
@@ -37,6 +38,7 @@ const EditPage = props => {
                         autoFocus
                     />
                     <input
+                        className={"edit__input"}
                         value={note}
                         onChange={(e) => {
                             setNote(e.target.value)
@@ -57,16 +59,22 @@ const EditPage = props => {
                         }}
                         numberOfMonths={1}
                     />
-                    <button>
-                        Save changes!
-                    </button>
+                    <div className={"edit__btn__wrapper"}>
+                        <button className={"edit__btn"}>
+                            Save changes!
+                        </button>
+                    </div>
+
                 </form>
-                <button onClick={(e) => {
-                    props.removeEvent(props.event.id);
-                    props.history.push("/");
-                }}>
-                    Remove event
-                </button>
+                <div className={"edit__btn__wrapper"}>
+                    <button className={"edit__btn"} onClick={(e) => {
+                        props.removeEvent(props.event.id);
+                        props.history.push("/");
+                    }}>
+                        Remove event
+                    </button>
+                </div>
+
             </div>
 
         </div>
@@ -74,11 +82,11 @@ const EditPage = props => {
 };
 
 const mapStateToProps = (state, props) => ({
-   event: state.calendar.find((event) => event.id === props.match.params.id)
+    event: state.calendar.find((event) => event.id === props.match.params.id)
 });
 
 const mapDispatchToProps = dispatch => ({
-    startEditEvent: (id, {title, at, note}) => dispatch(startEditEvent(id,{title, at, note})),
+    startEditEvent: (id, {title, at, note}) => dispatch(startEditEvent(id, {title, at, note})),
     removeEvent: (id) => dispatch(startRemoveEvent(id))
 });
 

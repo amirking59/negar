@@ -1,0 +1,32 @@
+.edit {
+    &__title {
+        font-family: "Source Sans Pro", serif;
+    }
+    &__input {
+        //border: none;
+        font-family: "Source Sans Pro", serif;
+        font-weight: 700;
+        padding: 5px 10px;
+        display: block;
+        margin: 20px 0;
+        width: 100%;
+    }
+    &__wrapper {
+        width: 50%;
+    }
+
+    &__btn {
+        font-size: 20px;
+        font-family: "Source Sans Pro", serif;
+        font-weight: 700;
+        margin: 0 auto;
+        color: white;
+        background: black;
+        border: none;
+        padding: 10px 20px;
+
+        &__wrapper {
+            margin-top: 20px;
+        }
+    }
+}
